@@ -90,7 +90,7 @@ Check that you still have `(Amuse-env)` in your prompt, and then do
 
 ```
 $ pip install --upgrade pip
-$ pip install numpy docutils mpi4py h5py wheel scipy astropy
+$ pip install 'setuptools>63' numpy docutils mpi4py h5py wheel scipy astropy
 $ pip install jupyter pandas seaborn matplotlib
 ```
 
