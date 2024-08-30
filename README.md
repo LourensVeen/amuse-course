@@ -116,7 +116,7 @@ Next, we can build the parts of AMUSE we need for this course:
 
 ```
 amuse-src$ make framework
-amuse-src$ make huayno.code fi.code hermite.code ph4.code mesa_r2208.code seba.code
+amuse-src$ make huayno.code fi.code hermite.code ph4.code mesa_r2208.code mesa_r15140 seba.code
 ```
 
 This will take 5-15 minutes depending on the speed of your computer.
