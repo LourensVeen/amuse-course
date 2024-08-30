@@ -115,6 +115,7 @@ tutorial.
 Next, we can build the parts of AMUSE we need for this course:
 
 ```
+amuse-src$ make framework
 amuse-src$ make huayno.code fi.code hermite.code ph4.code mesa_r2208.code seba.code
 ```
 
