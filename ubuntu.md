@@ -92,9 +92,9 @@ Double-check that it says `(Amuse-env)` at the beginning of the prompt, and then
 install the dependencies using
 
 ```
-conda install gcc gxx gfortran binutils unzip patch make python coreutils cmake
-conda install openmpi openmpi-mpicc openmpi-mpicxx openmpi-mpifort gsl fftw gmp mpfr
-conda install hdf5 netcdf4 libblas liblapack git
+conda install gcc gxx gfortran binutils unzip patch make python coreutils
+conda install cmake openmpi openmpi-mpicc openmpi-mpicxx openmpi-mpifort
+conda install gsl fftw gmp mpfr hdf5 netcdf4 libblas liblapack git
 conda install pip 'setuptools>63' numpy docutils mpi4py h5py wheel
 conda install scipy astropy jupyter pandas seaborn matplotlib
 ```
@@ -124,7 +124,8 @@ Next, we can build the parts of AMUSE we need for this course:
 
 ```
 make framework
-make huayno.code fi.code hermite.code ph4.code seba.code mesa_r2208.code sphray.code bhtree.code
+make huayno.code fi.code hermite.code ph4.code seba.code
+make mesa_r2208.code sphray.code bhtree.code
 ```
 
 This will take 15-45 minutes depending on the speed of your computer.
