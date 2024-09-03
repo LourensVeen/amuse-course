@@ -124,7 +124,7 @@ Next, we can build the parts of AMUSE we need for this course:
 
 ```
 make framework
-make huayno.code fi.code hermite.code ph4.code seba.code mesa_r2208.code
+make huayno.code fi.code hermite.code ph4.code seba.code mesa_r2208.code sphray.code bhtree.code
 ```
 
 This will take 15-45 minutes depending on the speed of your computer.
