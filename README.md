@@ -98,7 +98,7 @@ folder). To install AMUSE and its dependencies, we need to create an enviroment 
 using
 
 ```
-$ conda create -n Amuse-env
+$ conda create -n Amuse-env -c conda-forge --override-channels
 ```
 
 Next, we can activate the environment, and then install the dependencies:
@@ -292,7 +292,7 @@ folder). To install AMUSE and its dependencies, we need to create an enviroment 
 using
 
 ```
-% conda create -n Amuse-env
+% conda create -n Amuse-env -c conda-forge --override-channels
 ```
 
 Next, we can activate the environment, and then install the dependencies:
