@@ -42,10 +42,11 @@ can use it.
 We'll be using the conda package manager to install the tools and libraries that we need
 to install AMUSE. First, let's check if you have conda already.
 
-Open a terminal, and type this, then press Enter:
+Open a terminal window. You will see a bit of text (the *prompt*, and then a cursor
+waiting for you to type a command. Type this, then press Enter:
 
 ```
-$ conda info
+conda info
 ```
 
 If it gives an overview starting with `active environment` then you have Conda already
@@ -59,12 +60,11 @@ should continue here with installing Miniforge.
 Go to the [Miniforge download page](https://conda-forge.org/download/) and select the
 Linux x64_64 (amd64) version.
 
-Next, open a terminal. At the prompt, type (the $ is already there, you need to type the
-rest and then press Enter):
+Next, open a terminal. At the prompt, type this (press Enter after each line)
 
 ```
-$ cd Downloads
-$ bash Miniforge3-Linux-x86_64.sh
+cd Downloads
+bash Miniforge3-Linux-x86_64.sh
 ```
 
 To accept the license (it's all open source) you may have to press q first to exit the
@@ -96,8 +96,8 @@ the front of your prompt. This is exactly that base environment that we don't wa
 go ahead and type (or copy-paste from the other window)
 
 ```
-$ conda deactivate
-$ conda config --set auto_activate_base false
+conda deactivate
+conda config --set auto_activate_base false
 ```
 
 Now you can close the original terminal, and continue with the newly opened one that has
@@ -111,24 +111,24 @@ folder). To install AMUSE and its dependencies, we need to create an enviroment 
 using
 
 ```
-$ conda create -n Amuse-env -c conda-forge --override-channels
+conda create -n Amuse-env -c conda-forge --override-channels
 ```
 
 Next, we can activate the environment, and then install the dependencies:
 
 ```
-$ conda activate Amuse-env
+conda activate Amuse-env
 ```
 
 Double-check that it says `(Amuse-env)` at the beginning of the prompt, and then you can
 install the dependencies using
 
 ```
-$ conda install gcc gxx gfortran binutils unzip patch make python coreutils cmake
-$ conda install openmpi openmpi-mpicc openmpi-mpicxx openmpi-mpifort gsl fftw gmp mpfr
-$ conda install hdf5 netcdf4 libblas liblapack git
-$ conda install pip 'setuptools>63' numpy docutils mpi4py h5py wheel
-$ conda install scipy astropy jupyter pandas seaborn matplotlib
+conda install gcc gxx gfortran binutils unzip patch make python coreutils cmake
+conda install openmpi openmpi-mpicc openmpi-mpicxx openmpi-mpifort gsl fftw gmp mpfr
+conda install hdf5 netcdf4 libblas liblapack git
+conda install pip 'setuptools>63' numpy docutils mpi4py h5py wheel
+conda install scipy astropy jupyter pandas seaborn matplotlib
 ```
 
 ## Installing AMUSE
@@ -137,15 +137,15 @@ Now, we can install AMUSE itself. First, we need to get the source code, which w
 using git:
 
 ```
-$ git clone https://github.com/amusecode/amuse.git amuse-src
+git clone https://github.com/amusecode/amuse.git amuse-src
 ```
 
 This will make a new directory with AMUSE in it. We can enter that directory, and
 configure AMUSE:
 
 ```
-$ cd amuse-src
-amuse-src$ ./configure
+cd amuse-src
+./configure
 ```
 
 This will produce a bunch of output about all sorts of things that it's found or not. If
@@ -155,8 +155,8 @@ tutorial.
 Next, we can build the parts of AMUSE we need for this course:
 
 ```
-amuse-src$ make framework
-amuse-src$ make huayno.code fi.code hermite.code ph4.code seba.code mesa_r2208.code
+make framework
+make huayno.code fi.code hermite.code ph4.code seba.code mesa_r2208.code
 ```
 
 This will take 15-45 minutes depending on the speed of your computer.
@@ -166,22 +166,28 @@ activate that environment. Check that you still have `(Amuse-env)` in your promp
 then do
 
 ```
-amuse-src$ pip install -e .
+pip install -e .
 ```
 
 This concludes the installation. You will now be able to open a terminal, type
 
 ```
-$ conda activate Amuse-env
+conda activate Amuse-env
 ```
 
 to activate the environment, and then
 
 ```
-$ jupyter lab
+jupyter lab
 ```
 
-to run your AMUSE scripts.
+to run your AMUSE scripts in a Jupyter environment, or you can use
+
+```
+python script.py
+```
+
+to run them directly.
 
 
 ## Known issues
@@ -212,14 +218,13 @@ itself.
 
 The standard macOS developer tools are called XCode. To install them, open the Terminal
 app. You'll see a window with some text in it. This text is known as the *prompt*, and
-what it says varies a bit from machine to machine, but it ends with a `%` sign, after
-which you can type commands.
+what it says varies a bit from machine to machine, but there's a cursor after it where
+you can type commands.
 
-To install XCode, type this and press Enter: (the % is already there as part of your
-prompt, you need to type the rest)
+To install XCode, type this and press Enter:
 
 ```
-% xcode-select --install
+xcode-select --install
 ```
 
 This will seem to do nothing, but if you click the Apple logo at the top left, then
@@ -235,7 +240,7 @@ to install AMUSE. First, let's check if you have conda already.
 Open a terminal, and type:
 
 ```
-$ conda info
+conda info
 ```
 
 If it gives an overview starting with `active environment` then you have Conda already
@@ -255,14 +260,14 @@ rest and then press Enter):
 
 
 ```
-% cd Downloads
+cd Downloads
 ```
 
 and then either of these, depending on which hardware you have:
 
 ```
-% bash Miniforge3-MacOSX-x86_64.sh
-% bash Miniforge3-MacOSX-arm64.sh
+bash Miniforge3-MacOSX-x86_64.sh
+bash Miniforge3-MacOSX-arm64.sh
 
 ```
 
@@ -293,11 +298,11 @@ opened.
 So next, select Shell -> New Window in the top menu bar to open a second Terminal
 window, and notice that a new `(base)` has appeared at the front of your prompt. This is
 exactly that base environment that we don't want. So, go ahead and type (or copy-paste
-from the other window)
+from the other window) these. Press Enter after each line.
 
 ```
-% conda deactivate
-% conda config --set auto_activate_base false
+conda deactivate
+conda config --set auto_activate_base false
 ```
 
 Now you can close the original Terminal, and continue with the newly opened one that has
@@ -311,24 +316,24 @@ folder). To install AMUSE and its dependencies, we need to create an enviroment 
 using
 
 ```
-% conda create -n Amuse-env -c conda-forge --override-channels
+conda create -n Amuse-env -c conda-forge --override-channels
 ```
 
 Next, we can activate the environment, and then install the dependencies:
 
 ```
-% conda activate Amuse-env
+conda activate Amuse-env
 ```
 
 Double-check that it says `(Amuse-env)` at the beginning of the prompt, and then you can
 install the dependencies using
 
 ```
-% conda install clang clangxx gfortran make openmpi python coreutils cmake
-% conda install openmpi-mpicc openmpi-mpicxx openmpi-mpifort gsl fftw gmp mpfr
-% conda install hdf5 netcdf4 libblas liblapack git
-% conda install 'setuptools>63' numpy docutils mpi4py h5py wheel
-% conda install scipy astropy jupyter pandas seaborn matplotlib
+conda install clang clangxx gfortran make openmpi python coreutils cmake
+conda install openmpi-mpicc openmpi-mpicxx openmpi-mpifort gsl fftw gmp mpfr
+conda install hdf5 netcdf4 libblas liblapack git
+conda install 'setuptools>63' numpy docutils mpi4py h5py wheel
+conda install scipy astropy jupyter pandas seaborn matplotlib
 ```
 
 ## Installing AMUSE
@@ -338,15 +343,15 @@ we need to download it. This will create a directory named `amuse-src` with the 
 source code:
 
 ```
-% git clone https://github.com/LourensVeen/amuse.git amuse-src
+git clone https://github.com/LourensVeen/amuse.git amuse-src
 ```
 
 Then we can enter that directory, and configure AMUSE:
 
 ```
-% cd amuse-src
-amuse-src % git switch amuse-course-mac
-amuse-src % ./configure
+cd amuse-src
+git switch amuse-course-mac
+./configure
 ```
 
 This will produce a bunch of output about all sorts of things that it's found or not. If
@@ -356,8 +361,8 @@ tutorial.
 Next, we can build the parts of AMUSE we need for this course:
 
 ```
-amuse-src % make framework
-amuse-src % make huayno.code fi.code hermite.code ph4.code mesa_r2208.code seba.code
+make framework
+make huayno.code fi.code hermite.code ph4.code mesa_r2208.code seba.code
 ```
 
 This will take up to half an hour depending on the speed of your computer.
@@ -366,20 +371,20 @@ Finally, we install AMUSE into the conda environment, so that it's available whe
 activate it:
 
 ```
-amuse-src % pip install -e .
+pip install -e .
 ```
 
 This concludes the installation. You will now be able to open a terminal, type
 
 ```
-% export OMPI_MCA_rmaps_base_oversubscribe=true
-% . ~/Amuse-env/bin/activate
+export OMPI_MCA_rmaps_base_oversubscribe=true
+. ~/Amuse-env/bin/activate
 ```
 
 to activate the environment, and then
 
 ```
-% jupyter lab
+jupyter lab
 ```
 
 to start Jupyter and run your AMUSE scripts.
