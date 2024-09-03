@@ -378,7 +378,7 @@ This concludes the installation. You will now be able to open a terminal, type
 
 ```
 export OMPI_MCA_rmaps_base_oversubscribe=true
-. ~/Amuse-env/bin/activate
+conda activate Amuse-env
 ```
 
 to activate the environment, and then
@@ -387,5 +387,11 @@ to activate the environment, and then
 jupyter lab
 ```
 
-to start Jupyter and run your AMUSE scripts.
+to start Jupyter and run your AMUSE scripts, or you can use
+
+```
+python script.py
+```
+
+to run them directly.
 
