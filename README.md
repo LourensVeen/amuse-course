@@ -37,11 +37,24 @@ then we create an environment (and install some more dependencies), then we get 
 source code, and finally we compile and install AMUSE into the environment so that we
 can use it.
 
-## Installing Miniforge
+## Installing conda
 
 We'll be using the conda package manager to install the tools and libraries that we need
-to install AMUSE. If you have a working conda setup already, then you can skip this
-section and continue at *Making a conda environment* below.
+to install AMUSE. First, let's check if you have conda already.
+
+Open a terminal, and type this, then press Enter:
+
+```
+$ conda info
+```
+
+If it gives an overview starting with `active environment` then you have Conda already
+available, and you should go to *Creating a conda environment* below.
+
+If it says `conda: command not found` then you don't have Conda available, and you
+should continue here with installing Miniforge.
+
+## Installing Miniforge
 
 Go to the [Miniforge download page](https://conda-forge.org/download/) and select the
 Linux x64_64 (amd64) version.
@@ -216,14 +229,20 @@ tools for XCode". Go ahead and install the update to make the XCode tools availa
 
 ## Installing Conda
 
-Installing the dependencies for AMUSE is a bit more difficult on macOS than on Linux,
-because they're not in the App Store. Instead, an alternative package manager needs to
-be installed first. There are basically three options here: Homebrew, MacPorts, and
-Conda. I've seen way too many botched Homebrew and MacPorts setups, so we'll use Conda
-here.
+We'll be using the conda package manager to install the tools and libraries that we need
+to install AMUSE. First, let's check if you have conda already.
 
-If you already have a version of Conda set up on your Mac, then you should skip the
-next step and go to "Creating a Conda environment".
+Open a terminal, and type:
+
+```
+$ conda info
+```
+
+If it gives an overview starting with `active environment` then you have Conda already
+available, and you should go to *Creating a conda environment* below.
+
+If it says `conda: command not found` then you don't have Conda available, and you
+should continue here with installing Miniforge.
 
 ## Installing Miniforge
 
