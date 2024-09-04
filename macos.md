@@ -155,6 +155,7 @@ tutorial.
 Next, we can build the parts of AMUSE we need for this course:
 
 ```
+export MACOSX_DEPLOYMENT_TARGET=10.13
 make framework
 make huayno.code fi.code hermite.code ph4.code mesa_r2208.code
 make seba.code sphray.code bhtree.code
