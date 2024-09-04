@@ -88,8 +88,8 @@ Next, we can activate the environment, and then install the dependencies:
 conda activate Amuse-env
 ```
 
-Double-check that it says `(Amuse-env)` at the beginning of the prompt, and then you can
-install the dependencies using
+*Double-check that it says `(Amuse-env)`* at the beginning of the prompt, and
+then you can install the dependencies using
 
 ```
 conda install gcc gxx gfortran binutils unzip patch make python coreutils
@@ -123,6 +123,7 @@ tutorial.
 Next, we can build the parts of AMUSE we need for this course:
 
 ```
+ulimit -n 10240
 make framework
 make huayno.code fi.code hermite.code ph4.code seba.code
 make mesa_r2208.code sphray.code bhtree.code
