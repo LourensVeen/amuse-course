@@ -129,7 +129,7 @@ Double-check that it says `(Amuse-env)` at the beginning of the prompt, and then
 install the dependencies using
 
 ```
-conda install clang clangxx gfortran make openmpi python coreutils cmake openmpi-mpicc openmpi-mpicxx openmpi-mpifort gsl fftw gmp mpfr hdf5 netcdf4 libblas liblapack git 'setuptools>63' numpy docutils mpi4py h5py wheel scipy astropy jupyter pandas seaborn matplotlib
+conda install -c conda-forge clang clangxx gfortran make openmpi python coreutils cmake openmpi-mpicc openmpi-mpicxx openmpi-mpifort gsl fftw gmp mpfr hdf5 netcdf4 libblas liblapack git 'setuptools>63' numpy docutils mpi4py h5py wheel scipy astropy jupyter pandas seaborn matplotlib
 ```
 
 ## Installing AMUSE

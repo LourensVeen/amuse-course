@@ -98,7 +98,7 @@ conda activate Amuse-env
 then you can install the dependencies using
 
 ```
-conda install gcc gxx gfortran binutils unzip patch make python coreutils cmake openmpi openmpi-mpicc openmpi-mpicxx openmpi-mpifort gsl fftw gmp mpfr hdf5 netcdf4 libblas liblapack git pip 'setuptools>63' numpy docutils mpi4py h5py wheel scipy astropy jupyter pandas seaborn matplotlib
+conda install -c conda-forge gcc gxx gfortran binutils unzip patch make python coreutils cmake openmpi openmpi-mpicc openmpi-mpicxx openmpi-mpifort gsl fftw gmp mpfr hdf5 netcdf4 libblas liblapack git pip 'setuptools>63' numpy docutils mpi4py h5py wheel scipy astropy jupyter pandas seaborn matplotlib
 ```
 
 ## Installing AMUSE
