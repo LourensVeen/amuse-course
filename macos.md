@@ -61,6 +61,9 @@ and then either of these, depending on which hardware you have:
 
 ```
 bash Miniforge3-MacOSX-x86_64.sh
+```
+
+```
 bash Miniforge3-MacOSX-arm64.sh
 
 ```
@@ -96,6 +99,9 @@ from the other window) these. Press Enter after each line.
 
 ```
 conda deactivate
+```
+
+```
 conda config --set auto_activate_base false
 ```
 
@@ -123,11 +129,7 @@ Double-check that it says `(Amuse-env)` at the beginning of the prompt, and then
 install the dependencies using
 
 ```
-conda install clang clangxx gfortran make openmpi python coreutils
-conda install cmake openmpi-mpicc openmpi-mpicxx openmpi-mpifort gsl
-conda install fftw gmp mpfr hdf5 netcdf4 libblas liblapack git
-conda install 'setuptools>63' numpy docutils mpi4py h5py wheel
-conda install scipy astropy jupyter pandas seaborn matplotlib
+conda install clang clangxx gfortran make openmpi python coreutils cmake openmpi-mpicc openmpi-mpicxx openmpi-mpifort gsl fftw gmp mpfr hdf5 netcdf4 libblas liblapack git 'setuptools>63' numpy docutils mpi4py h5py wheel scipy astropy jupyter pandas seaborn matplotlib
 ```
 
 ## Installing AMUSE
@@ -144,7 +146,13 @@ Then we can enter that directory, and configure AMUSE:
 
 ```
 cd amuse-src
+```
+
+```
 git switch amuse-course-mac
+```
+
+```
 ./configure
 ```
 
@@ -156,9 +164,14 @@ Next, we can build the parts of AMUSE we need for this course:
 
 ```
 export MACOSX_DEPLOYMENT_TARGET=10.13
+```
+
+```
 make framework
-make huayno.code fi.code hermite.code ph4.code mesa_r2208.code
-make seba.code sphray.code bhtree.code
+```
+
+```
+make huayno.code fi.code hermite.code ph4.code mesa_r2208.code seba.code sphray.code bhtree.code
 ```
 
 This will take up to half an hour depending on the speed of your computer.
@@ -174,6 +187,9 @@ This concludes the installation. You will now be able to open a terminal, type
 
 ```
 export OMPI_MCA_rmaps_base_oversubscribe=true
+```
+
+```
 conda activate Amuse-env
 ```
 
