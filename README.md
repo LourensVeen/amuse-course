@@ -19,3 +19,8 @@ continue:
 
 [Windows](https://github.com/LourensVeen/amuse-course/blob/main/windows.md)
 
+These instructions are specific to the Sterrewacht vDesk systems, please use them
+instead of the Linux instructions above if that's what you want to use:
+
+[vDesk Linux](https://github.com/LourensVeen/amuse-course/blob/main/vdesk.md)
+
