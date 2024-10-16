@@ -237,3 +237,48 @@ python script.py
 
 to run them directly.
 
+
+## Installing more community codes
+
+In the above instructions, we've installed a subset of the community codes available in
+AMUSE. Unfortunately, one of the needed codes, hop, is missing, which you'll notice
+because AMUSE complains about a missing worker. So it needs to be installed still.
+
+Besides hop, you may want to use other community codes for your project later. Here is
+how to install additional community codes, assuming you have already done the above
+steps before.
+
+First, activate your conda environment if you haven't already got it active:
+
+```
+conda activate Amuse-env
+```
+
+Next, enter the AMUSE source directory. With the setup we created above, AMUSE is
+actually run from this directory. It just doesn't have so-called workers yet for all
+community codes.
+
+```
+cd /data2/`whoami`/amuse-src
+```
+
+Now we can set the ulimit to ensure the operating system doesn't think something is
+wrong and stop the build:
+
+```
+ulimit -n 10240
+```
+
+And finally we can build the workers for hop, or in the same way for any other code:
+
+```
+make hop.code
+```
+
+You should now be able to use hop in your notebook.
+
+Note that some of the community codes are currently broken, they were written a long
+time ago and some of them need an update. If you encounter a broken code that you'd like
+to use, please let us know on Slack and we'll see if there's an alternative or a fix we
+can arrange.
+
